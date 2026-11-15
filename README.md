@@ -225,5 +225,3 @@ Play policy for accessibility-based blocking.
 ## License
 
 MIT
-#   a n d r o i d _ a p p _ b l o c k e r  
- 
