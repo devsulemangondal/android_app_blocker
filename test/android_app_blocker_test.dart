@@ -1,5 +1,4 @@
 import 'package:android_app_blocker/android_app_blocker.dart';
-import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

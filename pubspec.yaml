@@ -5,11 +5,8 @@ description: >-
   an optional background callback that decides when blocking applies.
 version: 0.1.0
 
-# TODO(you): point these at a repository under whichever account you want
-# publicly associated with this package. Both are optional, but pub.dev scores
-# packages higher when a repository is present.
-# repository: https://github.com/<your-account>/android_app_blocker
-# issue_tracker: https://github.com/<your-account>/android_app_blocker/issues
+repository: https://github.com/devsulemangondal/android_app_blocker
+issue_tracker: https://github.com/devsulemangondal/android_app_blocker/issues
 
 topics:
   - android

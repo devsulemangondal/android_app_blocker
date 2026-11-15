@@ -47,19 +47,40 @@ class BlockerService : Service() {
     private var overlayView: FrameLayout? = null
     private var overlayEngine: FlutterEngine? = null
     private var overlayFlutterView: FlutterView? = null
+
+    @Volatile
     private var overlayShowing = false
+
+    @Volatile
     private var overlayPackage = ""
+
+    @Volatile
     private var overlayShownAtMs = 0L
 
-    /** One-shot bypass: cleared as soon as the user leaves the app. */
-    private val bypassed = mutableSetOf<String>()
+    /**
+     * One-shot bypass: cleared as soon as the user leaves the app. Touched from
+     * both the polling thread and the main thread, hence the concurrent set.
+     */
+    private val bypassed: MutableSet<String> =
+        java.util.concurrent.ConcurrentHashMap.newKeySet()
+
+    @Volatile
     private var lastAllowedPackage = ""
+
+    @Volatile
     private var lastForegroundPackage = ""
 
     /** Tri-state decision for [decisionPackage]: null = unknown, never blocks. */
+    @Volatile
     private var decisionPackage = ""
+
+    @Volatile
     private var decisionBlocked: Boolean? = null
+
+    @Volatile
     private var decisionInFlight = false
+
+    @Volatile
     private var lastDecisionAttemptMs = 0L
 
     private var lastBlockedReloadMs = 0L
