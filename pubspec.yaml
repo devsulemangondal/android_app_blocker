@@ -1,0 +1,36 @@
+name: android_app_blocker
+description: >-
+  Block any Android app from Flutter. Shows a customisable full-screen block
+  screen over blocked apps, with permission helpers, on-device usage stats and
+  an optional background callback that decides when blocking applies.
+version: 0.1.0
+
+# TODO(you): point these at a repository under whichever account you want
+# publicly associated with this package. Both are optional, but pub.dev scores
+# packages higher when a repository is present.
+# repository: https://github.com/<your-account>/android_app_blocker
+# issue_tracker: https://github.com/<your-account>/android_app_blocker/issues
+
+topics:
+  - android
+  - productivity
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.appblocker.android_app_blocker
+        pluginClass: AndroidAppBlockerPlugin

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aab_overlay_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp"
+    android:background="#FFFFFFFF">
+
+    <ImageView
+        android:id="@+id/aab_overlay_icon"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="28dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/aab_ic_block" />
+
+    <TextView
+        android:id="@+id/aab_overlay_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="4dp"
+        android:textColor="#FF101828" />
+
+    <TextView
+        android:id="@+id/aab_overlay_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="#FF667085" />
+
+    <TextView
+        android:id="@+id/aab_overlay_app_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textColor="#FF98A2B3"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/aab_overlay_primary"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/aab_bg_primary_button"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFFFF"
+        android:stateListAnimator="@null" />
+
+    <TextView
+        android:id="@+id/aab_overlay_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="#FF667085"
+        android:background="?android:attr/selectableItemBackground" />
+
+</LinearLayout>
